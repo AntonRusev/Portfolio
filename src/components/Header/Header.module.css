@@ -1,10 +1,12 @@
 #header {
     /* background-color: #1b2c47; */
     /* background-color: #0e1724; */
+    position:relative;
     display: flex;
     justify-content: center;
     background: rgb(34, 193, 195);
-    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(14, 23, 36, 1) 90%);
+    /* TODO- ORIGINAL WAS background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(14, 23, 36, 1) 90%); */
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(14, 23, 36, 0.8112969871542367) 90%);
     color: #03e9f4;
     height: 100vh;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);

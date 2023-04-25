@@ -4,3 +4,26 @@
     font-family: 'Changa', sans-serif;
     background-color: whitesmoke;
 }
+
+.parallax {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .paralax-base {
+    transform: translateZ(0);
+  }
+/* TODO FIX THE SCALE BELOW */
+  .parallax-back {
+    transform: translateZ(-12px) scale(14);
+  }
