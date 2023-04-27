@@ -3,6 +3,7 @@ import css from './Home.module.css'
 export const Home = () => {
     return (
         <main id={css.home}>
+
             <section id={css.about}>
                 <div className={css.bio}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nihil ea aliquid esse eveniet ratione maiores recusandae sunt, quasi, labore quidem animi blanditiis accusamus placeat deserunt consequuntur corporis ullam porro.</div>
                 <div className={css.pic}></div>
@@ -15,6 +16,7 @@ export const Home = () => {
             <section id={css.contact}>
                 <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex sunt laborum aliquam illum vero possimus?</div>
             </section>
+            
         </main>
     );
 };
