@@ -39,9 +39,13 @@ h3 {
     font-size: 1.2rem;
     font-weight: 500;
     color: whitesmoke;
+    text-shadow:
+    0 0 7px whitesmoke,
+    0 0 10px whitesmoke,
+    0 0 21px whitesmoke;
 }
 
-span {
+.highlight {
     animation: color-change 7s infinite;
 }
 @keyframes color-change {

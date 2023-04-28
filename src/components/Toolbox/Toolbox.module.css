@@ -1,0 +1,23 @@
+#toolbox {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12rem;
+}
+
+.pyramid {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.tool {
+    background-color: black;
+    color: white;
+    mix-blend-mode: darken;
+    padding: 2px;
+    font-weight: 600;
+    line-height: 0.9;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
