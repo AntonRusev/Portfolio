@@ -12,7 +12,7 @@ export const Card = () => {
             <div className={css.content}>
                 <h4 className={css.title}>Title</h4>
                 <p className={css.description}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora beatae, recusandae facere repudiandae ullam molestiae totam incidunt soluta debitis amet?</p>
-                <a href="#">Learn More</a>
+                <a href="#" className={css.button}>Learn More</a>
             </div>
         </article>
     );
