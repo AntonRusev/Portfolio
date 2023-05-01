@@ -1,12 +1,12 @@
 .card {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: center;
     align-items: flex-start;
     gap: 7rem;
-    width: 75%;
+    width: 60%;
     overflow: hidden;
     position: relative;
-    margin: 1rem;
     /* margin-top: 4rem; */
     /* margin-bottom: 10rem; */
 }
@@ -14,7 +14,7 @@
 .image-holder {
     position: relative;
     top: 0;
-    left: 0;
+    left: -7rem;
     /* aspect-ratio: 2/1.5; */
     margin-bottom: 8rem;
 }
@@ -24,6 +24,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    /* object-fit: contain; */
     border: solid 1px whitesmoke;
     box-shadow: 0 0 10px 0 whitesmoke inset, 0 0 10px 4px whitesmoke;
     transition: transform 300ms ease-in-out;
@@ -64,8 +65,12 @@
     flex-direction: column;
     gap: 0.5rem;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: flex-start;
     margin: 1rem;
+}
+
+.description {
+    text-align: end;
 }
 
 .title {
@@ -82,9 +87,9 @@
     animation: flicker 0.5s ease-in-out infinite alternate;
 }
 
-/* .title:hover {
+.title:hover {
     letter-spacing: 3px;
-} */
+}
 
 @keyframes flicker {
     0% {
@@ -123,29 +128,4 @@
     -webkit-text-stroke: 0.8px whitesmoke;
     border-color: black;
     text-shadow: 0.5px 1px 3px whitesmoke;
-}
-
-.even {
-    flex-direction: row-reverse;
-    margin-bottom: 5rem;
-}
-
-.even .content {
-margin-left: 3rem;
-align-items: flex-start;
-}
-
-.even .image-holder {
-    top: 0;
-    left: -4rem;
-    margin-bottom: 12rem;
-}
-
-.even .imageTwo {
-    top: 7rem;
-    left: -2rem;
-}
-
-.even .description {
-    text-align: end;
 }
