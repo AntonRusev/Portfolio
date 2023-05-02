@@ -3,7 +3,6 @@ import css from './Card.module.css';
 export const Card = ({
     props
 }) => {
-    console.log(props.style)
     return (
         <article className={`${css.card} ${css[props.style]}`}>
 

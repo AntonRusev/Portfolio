@@ -1,5 +1,4 @@
 import { Card } from '../Card/Card';
-import { CardTwo } from '../CardTwo/CardTwo';
 import { Toolbox } from '../Toolbox/Toolbox';
 
 import { projectsList } from '../../assets/projectsList';
@@ -12,8 +11,6 @@ export const Projects = () => {
             <Toolbox />
 
             {projectsList.map(x => <Card key={x.link} props={x} />)}
-            {/* <Card />
-            <CardTwo /> */}
         </section>
     );
 };
