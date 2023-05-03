@@ -1,39 +1,112 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 import css from './Contact.module.css';
+import { Modal } from '../Modal/Modal';
 
 export const Contact = () => {
+    const [isDisabled, setIsDisabled] = useState(true);
+    const [formErrors, setFormErrors] = useState({
+        username: '',
+        email: '',
+        message: ''
+    });
+    const [touched, setTouched] = useState({
+        username: false,
+        email: false,
+        message: false
+    });
+    const [modalActive, setModalActive] = useState(false);
+
     const form = useRef();
 
+    useEffect(() => {
+        if (formErrors.username || formErrors.email || formErrors.message) {
+            setIsDisabled(true);
+            modalTrigger();
+        } else if (touched.username === false || touched.email === false || touched.message === false) {
+            setIsDisabled(true);
+        } else {
+            setIsDisabled(false);
+        }
+    }, [formErrors.username, formErrors.email, formErrors.message, touched.username, touched.email, touched.message]);
+
     const sendEmail = (e) => {
-      e.preventDefault();
-  
-      emailjs.sendForm('service_oc8hto7', 'template_fqjye7i', form.current, 'MlBwpE6Z64Pnd-HKO')
-        .then((result) => {
-            console.log(result.text);
-            console.log('MESSAGE SENT')
-            e.target.reset();
-        }, (error) => {
-            console.log(error.text);
-        });
+        e.preventDefault();
+
+        emailjs.sendForm('service_oc8hto7', 'template_fqjye7i', form.current, 'MlBwpE6Z64Pnd-HKO')
+            .then((result) => {
+                console.log(result.text);
+                console.log('MESSAGE SENT')
+                e.target.reset();
+            }, (error) => {
+                console.log(error.text);
+            });
     };
+
+    const validateForm = (e) => {
+        const value = e.target.value;
+        const inputField = e.target.name;
+
+        if (inputField === 'user_name' && value === '') {
+            setFormErrors(state => ({ ...state, username: 'Username is required' }));
+        } else if (inputField === 'user_name' && value.length < 3) {
+            setFormErrors(state => ({ ...state, username: 'Username must be at least 3 characters long' }));
+        } else if (inputField === 'user_name') {
+            setFormErrors(state => ({ ...state, username: '' }));
+            setTouched(state => ({ ...state, username: true }));
+        }
+
+        if (inputField === 'user_email' && value === '') {
+            setFormErrors(state => ({ ...state, email: 'Email is required' }));
+        } else if (inputField === 'user_email' && value.length > 0) {
+            const isValid = isEmailValid(value);
+            if (isValid === false) {
+                console.log('why this?')
+                setFormErrors(state => ({ ...state, email: 'Email is invalid' }));
+            } else {
+                setFormErrors(state => ({ ...state, email: '' }));
+                setTouched(state => ({ ...state, email: true }));
+            }
+        }
+
+        if (inputField === 'message' && value === '') {
+            setFormErrors(state => ({ ...state, message: 'Message is required' }));
+        } else if (inputField === 'message' && value.length < 5) {
+            setFormErrors(state => ({ ...state, message: 'Message must be at least 5 characters long' }));
+        } else if (inputField === 'message') {
+            setFormErrors(state => ({ ...state, message: '' }));
+            setTouched(state => ({ ...state, message: true }));
+        }
+    }
 
     const logFormData = (e) => {
         e.preventDefault();
         console.log(form.current)
     }
 
+    const modalTrigger = () => {
+        setModalActive(!modalActive);
+    }
+
+    function isEmailValid(email) {
+        return /\S+@\S+\.\S+/.test(email);
+    }
+
     return (
         <section id={css.contact}>
             <form className={css['contact-form']} ref={form} onSubmit={logFormData}>
                 {/* <label>Name</label> */}
-                <input className={css.name} type="text" name="user_name" placeholder='Name'/>
+                <input className={css.name} type="text" name="user_name" placeholder='Name' onBlur={validateForm} />
                 {/* <label>Email</label> */}
-                <input className={css.email} type="email" name="user_email" placeholder='Email'/>
+                <input className={css.email} type="email" name="user_email" placeholder='Email' onBlur={validateForm} />
                 {/* <label>Message</label> */}
-                <textarea className={css.message} name="message" placeholder='Message'/>
-                <input className={css.submit} type="submit" value="Send" />
+                <textarea className={css.message} name="message" placeholder='Message' onBlur={validateForm} />
+
+                <input className={css.submit} type="submit" value="Send" disabled={isDisabled ? 'disabled' : ''} />
+                {/* <button onClick={modalTrigger}>Modal</button> */}
+
+                {modalActive && <Modal modalTrigger={modalTrigger} formErrors={formErrors} />}
             </form>
         </section>
     );

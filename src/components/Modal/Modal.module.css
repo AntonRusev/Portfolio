@@ -1,0 +1,52 @@
+.overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    /* backdrop-filter: saturate(2); */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    /* top: 0;
+    left: 0; */
+    font-size: 24px;
+    z-index: 1;
+    -webkit-animation: fadein 1.5s ease-in alternate infinite;
+    -moz-animation: fadein 1.5s ease-in alternate infinite;
+    animation: fadein 1.5s ease-in alternate infinite;
+}
+
+@keyframes fadein {
+    0%   { opacity: 0; }
+    30%   { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+.modal-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 24px;
+    border-radius: 6px;
+}
+
+.message {
+    color: red;
+    opacity: 0.7;
+    font-weight: 500;
+    text-shadow:
+    0 0 7px red,
+    0 0 10px red,
+    0 0 21px red;
+}
+
+.message .success {
+    color: #00c06d;
+    text-shadow:
+    0 0 7px #00c06d,
+    0 0 10px #00c06d,
+    0 0 21px #00c06d;
+}
