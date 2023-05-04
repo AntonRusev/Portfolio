@@ -7,7 +7,7 @@ import css from './Projects.module.css';
 
 export const Projects = () => {
     return (
-        <section id={css.projects}>
+        <section id='projects' className={css.projects}>
             <Toolbox />
 
             {projectsList.map(x => <Card key={x.link} props={x} />)}

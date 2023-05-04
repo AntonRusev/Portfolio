@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import css from './Card.module.css';
 
 export const Card = ({
@@ -14,7 +16,7 @@ export const Card = ({
             <div className={css.content}>
                 <h4 className={css.title}>{props.title}</h4>
                 <p className={css.description}>{props.description}</p>
-                <a href="#" className={css.button}>Learn More</a>
+                <Link to={`/${props.link}`} className={css.button}>Learn More</Link>
             </div>
         </article>
     );

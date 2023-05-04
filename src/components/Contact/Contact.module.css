@@ -1,16 +1,17 @@
-#contact {
+.contact {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: rgb(194, 11, 205);
     background: linear-gradient(180deg, rgba(194, 11, 205, 1) 0%, rgba(41, 17, 65, 0.6112969871542367) 80%);
     clip-path: polygon(0 0, 100% 40%, 100% 100%, 18% 100%, 0 100%);
-    height: 100vh;
+    min-height: 100vh;
     margin-bottom: 0;
 }
 
 section {
-    margin: 2rem 0rem;
+    /* margin: 2rem 0rem; */
 }
 
 .contact-form {
@@ -18,7 +19,8 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 12rem;
+    margin-bottom: 2rem;
 }
 
 .name,
@@ -55,31 +57,103 @@ section {
     width: 13rem;
     outline-width: 0;
     background: transparent;
-    /* backdrop-filter: saturate(2); */
     border: none;
     border-radius: 6px;
+    letter-spacing: 1.5px;
+    font-size: 1.1rem;
+    font-weight: 600;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 0.2rem;
     padding: 0.5rem;
     opacity: 1.1;
     color: whitesmoke;
-    text-shadow: 0.5px 1px 3px whitesmoke;
+    text-shadow:
+        0 0 7px whitesmoke,
+        0 0 10px whitesmoke,
+        0 0 21px whitesmoke;
     cursor: pointer;
-    transition: all 500ms ease-in-out;
-    letter-spacing: 1.5px;
-    font-size: 1.1rem;
-    font-weight: 600;
+    transition: all 200ms ease-in-out;
 }
 
 .submit:disabled {
-    color: gray;
+    color: rgb(70, 70, 70);
     text-shadow: none;
+    opacity: 0.5;
 }
 
 .submit:disabled:hover {
-    cursor: not-allowed;
+    pointer-events: none;
 }
 
 .submit:hover {
     backdrop-filter: saturate(1.5);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: whitesmoke;
+    opacity: 0.8;
+    animation: fade-out 2.5s ease-out infinite alternate;
+    position: absolute;
+    overflow: none;
+    margin-top: 23rem;
+}
+
+.msg-one {
+    animation: animation 5s infinite;
+}
+
+.msg-two {
+    animation: animate 5s infinite;
+}
+
+@keyframes animate {
+    0%   { opacity:0; }
+    25%   { opacity:0; }
+    50%   { opacity:1; }
+    75%   { opacity:0; }
+    100% { opacity:0; }
+  }
+  
+  @keyframes animation {
+    0%   { opacity:1; }
+    25%   { opacity:0; }
+    50%   { opacity:0; }
+    75%   { opacity:0; }
+    100% { opacity:1; }
+  }
+
+.social-media {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: whitesmoke;
+}
+
+.discord,
+.facebook,
+.github {
+    transition: all 600ms ease-in-out;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.discord:hover {
+    color: #5562ea;
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.facebook:hover {
+    color: #4867aa;
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.github:hover {
+    color: purple;
+    transform: scale(1.2);
+    opacity: 1;
 }

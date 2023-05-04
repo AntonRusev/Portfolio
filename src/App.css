@@ -7,9 +7,12 @@
 
 .parallax {
     perspective: 1px;
-    height: 200vh;
+    height: 100vh;
+    /* width: 110vw; */
     overflow-x: hidden;
     overflow-y: auto;
+    position: relative;
+
   }
 
   .layer {
@@ -25,5 +28,5 @@
   }
 /* TODO FIX THE SCALE BELOW */
   .parallax-back {
-    transform: translateZ(-12px) scale(14);
+    transform: translateZ(-15px) scale(21.8);
   }

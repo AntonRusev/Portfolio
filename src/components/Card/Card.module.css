@@ -110,19 +110,28 @@
     font-size: 0.9rem;
     line-height: 1;
     font-weight: 600;
-    padding: 0.3rem 1.5rem;
+    padding: 0.3rem 2.5rem;
     text-align: center;
     transition: all 300ms ease-in-out;
 }
 
 .button:hover {
     background-color: whitesmoke;
-    color: black;
-    mix-blend-mode: lighten;
-    box-shadow: inset 0px 0px 0px 16px #000;
-    -webkit-text-stroke: 0.8px whitesmoke;
-    border-color: black;
+    /* color: black; */
+    /* mix-blend-mode: lighten; */
+    /* box-shadow: inset 0px 0px 0px 14px #000; */
+    /* -webkit-text-stroke: 0.8px black;
+    border-color: whitesmoke; */
     text-shadow: 0.5px 1px 3px whitesmoke;
+    color: transparent;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+    mix-blend-mode: lighten;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .button:hover {
+        color: #000;
+    }
 }
 
 .even {

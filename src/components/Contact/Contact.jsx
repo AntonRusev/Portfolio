@@ -82,7 +82,8 @@ export const Contact = () => {
 
     const logFormData = (e) => {
         e.preventDefault();
-        console.log(form.current)
+        console.log(form.current);
+        setModalActive(!modalActive);
     }
 
     const modalTrigger = () => {
@@ -94,7 +95,7 @@ export const Contact = () => {
     }
 
     return (
-        <section id={css.contact}>
+        <section id="contact" className={css.contact} >
             <form className={css['contact-form']} ref={form} onSubmit={logFormData}>
                 {/* <label>Name</label> */}
                 <input className={css.name} type="text" name="user_name" placeholder='Name' onBlur={validateForm} />
@@ -104,10 +105,18 @@ export const Contact = () => {
                 <textarea className={css.message} name="message" placeholder='Message' onBlur={validateForm} />
 
                 <input className={css.submit} type="submit" value="Send" disabled={isDisabled ? 'disabled' : ''} />
-                {/* <button onClick={modalTrigger}>Modal</button> */}
 
                 {modalActive && <Modal modalTrigger={modalTrigger} formErrors={formErrors} />}
             </form>
+
+            <p className={`${css.subtitle} ${css['msg-one']}`}>Feeling social?</p>
+            <p className={`${css.subtitle} ${css['msg-two']}`}>Get in touch!</p>
+
+            <div className={css['social-media']}>
+                <p><i className={`${css.github} fa-brands fa-github`}></i></p>
+                <p><i className={`${css.discord} fa-brands fa-discord`}></i></p>
+                <p><i className={`${css.facebook} fa-brands fa-facebook`}></i></p>
+            </div>
         </section>
     );
 
