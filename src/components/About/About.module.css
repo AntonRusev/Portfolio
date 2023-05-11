@@ -1,12 +1,27 @@
 .about {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
     clip-path: polygon(45% 0, 100% 20%, 100% 80%, 20% 100%, 0 70%, 0 30%);
     background: rgb(2, 211, 248);
     background: radial-gradient(circle, rgba(2, 211, 248, 1) 0%, rgba(40, 14, 68, 0.6112969871542367) 100%);
     min-height: 100vh;
+}
+
+.title {
+    font-size: 1.3rem;
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    margin: 2rem 2rem;
 }
 
 .pic {
@@ -17,11 +32,10 @@
 }
 
 .info {
-    width: 50%;
+    /* width: 50%; */
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    /* margin: 10rem 10rem; */
 }
 
 .info-long,
@@ -29,7 +43,7 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin: 10rem 0rem;
+    /* margin: 10rem 0rem; */
 }
 
 h3 {
@@ -44,17 +58,35 @@ h3 {
     0 0 21px whitesmoke;
 }
 
-.link {
-    text-align: center;
-    letter-spacing: 2px;
-    font-size: 1.2rem;
-    font-weight: 500;
+.button {
+    /* display: flex; */
+    align-items: center;
     text-decoration: none;
+    border: 2px solid whitesmoke;
+    border-radius: 2px;
+    box-shadow: 0 0 10px 0 whitesmoke inset, 0 0 10px 4px whitesmoke;
     color: whitesmoke;
-    text-shadow:
-    0 0 7px whitesmoke,
-    0 0 10px whitesmoke,
-    0 0 21px whitesmoke;
+    outline: 0;
+    font-size: 0.9rem;
+    line-height: 1;
+    font-weight: 600;
+    padding: 0rem 2.5rem;
+    text-align: center;
+    transition: all 300ms ease-in-out;
+}
+
+.button:hover {
+    background-color: whitesmoke;
+    text-shadow: 0.5px 1px 3px whitesmoke;
+    color: transparent;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+    mix-blend-mode: lighten;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .button:hover {
+        color: #000;
+    }
 }
 
 .highlight {

@@ -28,5 +28,5 @@
   }
 /* TODO FIX THE SCALE BELOW */
   .parallax-back {
-    transform: translateZ(-15px) scale(21.8);
+    transform: translateZ(-15px) scale(19);
   }

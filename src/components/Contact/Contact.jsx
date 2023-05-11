@@ -49,9 +49,9 @@ export const Contact = () => {
         const inputField = e.target.name;
 
         if (inputField === 'user_name' && value === '') {
-            setFormErrors(state => ({ ...state, username: 'Username is required' }));
+            setFormErrors(state => ({ ...state, username: 'Name is required' }));
         } else if (inputField === 'user_name' && value.length < 3) {
-            setFormErrors(state => ({ ...state, username: 'Username must be at least 3 characters long' }));
+            setFormErrors(state => ({ ...state, username: 'Name must be at least 3 characters long' }));
         } else if (inputField === 'user_name') {
             setFormErrors(state => ({ ...state, username: '' }));
             setTouched(state => ({ ...state, username: true }));
@@ -96,27 +96,33 @@ export const Contact = () => {
 
     return (
         <section id="contact" className={css.contact} >
-            <form className={css['contact-form']} ref={form} onSubmit={logFormData}>
-                {/* <label>Name</label> */}
-                <input className={css.name} type="text" name="user_name" placeholder='Name' onBlur={validateForm} />
-                {/* <label>Email</label> */}
-                <input className={css.email} type="email" name="user_email" placeholder='Email' onBlur={validateForm} />
-                {/* <label>Message</label> */}
-                <textarea className={css.message} name="message" placeholder='Message' onBlur={validateForm} />
 
-                <input className={css.submit} type="submit" value="Send" disabled={isDisabled ? 'disabled' : ''} />
+            <h2 id="contact-me" className={css.title}>Contact</h2>
+            
+            <div className={css.content}>
+                <form className={css['contact-form']} ref={form} onSubmit={logFormData}>
 
-                {modalActive && <Modal modalTrigger={modalTrigger} formErrors={formErrors} />}
-            </form>
+                    <input className={css.name} type="text" name="user_name" placeholder='Name' onBlur={validateForm} />
 
-            <p className={`${css.subtitle} ${css['msg-one']}`}>Feeling social?</p>
-            <p className={`${css.subtitle} ${css['msg-two']}`}>Get in touch!</p>
+                    <input className={css.email} type="email" name="user_email" placeholder='Email' onBlur={validateForm} />
 
-            <div className={css['social-media']}>
-                <p><i className={`${css.github} fa-brands fa-github`}></i></p>
-                <p><i className={`${css.discord} fa-brands fa-discord`}></i></p>
-                <p><i className={`${css.facebook} fa-brands fa-facebook`}></i></p>
+                    <textarea className={css.message} name="message" placeholder='Message' onBlur={validateForm} />
+
+                    <input className={css.submit} type="submit" value="Send" disabled={isDisabled ? 'disabled' : ''} />
+
+                    {modalActive && <Modal modalTrigger={modalTrigger} formErrors={formErrors} />}
+                </form>
+
+                <p className={`${css.subtitle} ${css['msg-one']}`}>Feeling social?</p>
+                <p className={`${css.subtitle} ${css['msg-two']}`}>Get in touch!</p>
+
+                <div className={css['social-media']}>
+                    <p><i className={`${css.github} fa-brands fa-github`}></i></p>
+                    <p><i className={`${css.discord} fa-brands fa-discord`}></i></p>
+                    <p><i className={`${css.facebook} fa-brands fa-facebook`}></i></p>
+                </div>
             </div>
+            <p className={css['made-by']}>Designed and hand-coded by Anton Rusev. Year 2023.</p>
         </section>
     );
 

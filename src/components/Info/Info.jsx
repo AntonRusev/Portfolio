@@ -1,6 +1,9 @@
+import { HashLink } from "react-router-hash-link";
+
 import css from "./Info.module.css";
 
 export const Info = () => {
+
     return (
         <section id={css.info}>
             <div className={css['info-long']}>
@@ -24,6 +27,9 @@ export const Info = () => {
                 <p>
                     I have a thing for good storytelling, no matter the medium- books, movies or even games, the feeling of immersing into the <span className={css.highlight}>journey</span> is one of the most enjoyable for me. A good chunk of my free time is wasted that way...
                 </p>
+
+                {/* <button className={css['back-btn']} onClick={() => navigate('/')}>Back</button> */}
+                <HashLink smooth to={`/#about`} className={css['back-btn']}>Back</HashLink>
             </div>
         </section>
     );

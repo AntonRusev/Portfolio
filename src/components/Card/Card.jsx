@@ -1,6 +1,7 @@
-import { Link } from 'react-router-dom';
+import { HashLink } from "react-router-hash-link";
 
 import css from './Card.module.css';
+import {} from '../../assets/nft-create-mobile.png'
 
 export const Card = ({
     props
@@ -16,7 +17,7 @@ export const Card = ({
             <div className={css.content}>
                 <h4 className={css.title}>{props.title}</h4>
                 <p className={css.description}>{props.description}</p>
-                <Link to={`/${props.link}`} className={css.button}>Learn More</Link>
+                <HashLink smooth to={`/${props.link}/#${props.link}`} className={css.button}>Learn More</HashLink>
             </div>
         </article>
     );

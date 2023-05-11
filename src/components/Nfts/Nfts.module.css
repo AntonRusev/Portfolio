@@ -1,10 +1,10 @@
-#nfts {
+.nfts {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    clip-path: polygon(45% 0, 100% 20%, 100% 80%, 20% 100%, 0 70%, 0 30%);
+    clip-path: polygon(0 3%, 100% 0, 100% 50%, 86% 100%, 0% 100%);
     /* background: rgb(2, 211, 248); */
     background: linear-gradient(22deg, rgba(127, 45, 78, 1) 0%, rgba(201, 81, 207, 0.6112969871542367) 100%);
     min-height: 100vh;
@@ -15,16 +15,18 @@
     font-weight: 600;
     color: black;
     text-shadow:
-    0 0 7px black;
+        0 0 7px black;
     font-size: 1.2rem;
 }
 
 .image-holder {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     position: relative;
     top: 0;
     left: 0;
+    gap: 1rem;
     /* aspect-ratio: 2/1.5; */
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -37,6 +39,7 @@
     object-fit: cover;
     /* border: solid 1px whitesmoke;
     box-shadow: 0 0 10px 0 whitesmoke inset, 0 0 10px 4px whitesmoke; */
+    box-shadow: 0 0 10px 0 whitesmoke inset, 0 0 10px 4px whitesmoke;
     transition: transform 300ms ease-in-out;
 }
 
@@ -46,31 +49,73 @@
     /* top: 0;
     left: 0;
     margin-top: 1.6rem;
-    margin-left: 1.6rem;
+    margin-left: 1.6rem; */
     width: auto;
-    height: auto; */
+    height: auto;
     max-width: 200px;
-    max-height: 200px;
+    max-height: 500px;
 }
 
 .imageTwo {
     /* aspect-ratio: 1/1.5; */
     /* position: absolute; */
     /* top: 11rem;
-    left: 5rem;
+    left: 5rem; */
     width: auto;
-    height: auto; */
-    max-width: 200px;
+    height: auto;
+    max-width: 300px;
     max-height: 200px;
 }
 
-.content {
-    width: 60%;
-    margin-bottom: 12rem;
+.links {
+    display: flex;
+    gap: 1rem;
+    margin: 0rem 1rem;
 }
 
-.description, .info {
+.link-btn,
+.back-btn {
+    font-family: 'Changa', sans-serif;
+    position: relative;
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 0.3rem 2.5rem;
+    border: 0.5px whitesmoke solid;
+    background: transparent;
+    font-weight: 100;
+    transition: all 100ms ease-in-out;
+    cursor: pointer;
+}
+
+.link-btn::before,
+.back-btn::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -.6rem;
+    top: -.5rem;
+    z-index: -1;
+    backdrop-filter: blur(1.5rem);
+    transition: all 200ms ease-out;
+}
+
+  .link-btn:hover::before,
+.back-btn:hover::before{
+    top: 0;
+    left: 0;
+  }
+  
+.content {
+    width: 90%;
+    margin-bottom: 6rem;
+}
+
+.description,
+.info {
     margin: 2rem;
+    letter-spacing: 0.2px;
+    line-height: 1.2;
 }
 
 .subtitle {
@@ -78,8 +123,8 @@
     font-weight: 500;
     color: whitesmoke;
     text-shadow:
-    0 0 7px whitesmoke,
-    0 0 10px whitesmoke,
-    0 0 21px whitesmoke;
+        0 0 7px whitesmoke,
+        0 0 10px whitesmoke,
+        0 0 21px whitesmoke;
     font-size: 1.2rem;
 }

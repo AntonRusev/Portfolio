@@ -8,9 +8,16 @@ import css from './Projects.module.css';
 export const Projects = () => {
     return (
         <section id='projects' className={css.projects}>
-            <Toolbox />
 
-            {projectsList.map(x => <Card key={x.link} props={x} />)}
+            <h2 id="my-projects" className={css.title}>Projects</h2>
+
+            <p className={css.subtitle}>Some of the tools and technologies that I've used in my projects:</p>
+
+            <div className={css.content}>
+                <Toolbox />
+
+                {projectsList.map(x => <Card key={x.link} props={x} />)}
+            </div>
         </section>
     );
 };
