@@ -97,7 +97,7 @@ export const Contact = () => {
     return (
         <section id="contact" className={css.contact} >
 
-            <h2 id="contact-me" className={css.title}>Contact</h2>
+            <h2 id="contact-me" className={css.title}>CONTACT</h2>
             
             <div className={css.content}>
                 <form className={css['contact-form']} ref={form} onSubmit={logFormData}>

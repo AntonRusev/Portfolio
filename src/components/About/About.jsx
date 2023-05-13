@@ -7,7 +7,7 @@ export const About = () => {
     // TODO - MAKE THE PAGE RETURN TO #ABOUT WHEN CLOSING DETAILS
     return (
         <section id='about' className={css.about}>
-            <h2 className={css.title}>About</h2>
+            <h2 className={css.title}>ABOUT</h2>
             <div className={css.content}>
                 <div className={css.info}>
                     <div className={css['info-short']}>
@@ -17,7 +17,9 @@ export const About = () => {
                     </div>
                 </div>
 
-                <div className={css.pic}></div>
+                <div className={css.pic}>
+                    <img src="../../src/assets/untitled design.png" alt="" />
+                </div>
             </div>
             <p>
                 <Link to="/info" className={css.button}>Learn More</Link>

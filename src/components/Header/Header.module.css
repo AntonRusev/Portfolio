@@ -58,8 +58,43 @@
 
 .intro-text {
     text-align: end;
-    font-size: 1.1rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 400;
     line-height: 1.4;
     letter-spacing: 1px;
 }
+
+.intro-text:first-child {
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVE DESIGN */
+
+@media screen and (min-width: 600px) {
+    .list {
+        gap: 3rem;
+    }
+
+    .list a {
+        font-size: 1.3rem;
+    }
+
+    .intro {
+        justify-content: center;
+        margin-top: 10rem;
+    }
+    
+    .intro-text {
+        font-size: 1.4rem;
+        line-height: 1.5;
+        letter-spacing: 1.1px;
+    }
+    
+    .intro-text:first-child {
+        font-size: 1.6rem;
+        letter-spacing: 1.3px;
+    }
+    
+  }

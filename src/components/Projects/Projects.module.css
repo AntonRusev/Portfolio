@@ -16,17 +16,55 @@
     align-items: center;
 }
 
+
 .title {
     color:black;
     font-size: 1.3rem;
-    margin-top: -9rem ;
+    margin-top: -8rem ;
+
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    color: whitesmoke;
+    font-weight: 900;
+    text-shadow:
+    0 0 7px whitesmoke,
+    0 0 10px whitesmoke,
+    0 0 21px whitesmoke,
+    0 0 32px whitesmoke,
+    0 0 43px whitesmoke;
+    transition: all 0.5s ease-in-out;
+    animation: flicker 0.5s ease-in-out infinite alternate;
 }
 
-  
+@keyframes flicker {
+    0% {
+        opacity: 0.5;
+        /* text-shadow: 2px 2px 10px whitesmoke; */
+    }
+
+    100% {
+        opacity: 1;
+        /* text-shadow: 2px 2px 20px whitesmoke; */
+    }
+}
 
 .subtitle {
     text-align: center;
     margin: 2rem 2rem;
     font-weight: 100;
     letter-spacing: 1px;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVE DESIGN */
+
+@media screen and (min-width: 600px) {
+    .title {
+        margin-top: -10rem ;
+        letter-spacing: 3px;
+        font-size: 1.8rem;
+    }
+
+    .projects {
+        min-height: 360vh;
+    }
 }

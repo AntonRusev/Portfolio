@@ -9,7 +9,7 @@ export const Projects = () => {
     return (
         <section id='projects' className={css.projects}>
 
-            <h2 id="my-projects" className={css.title}>Projects</h2>
+            <h2 id="my-projects" className={css.title}>PROJECTS</h2>
 
             <p className={css.subtitle}>Some of the tools and technologies that I've used in my projects:</p>
 
