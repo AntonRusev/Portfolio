@@ -1,8 +1,8 @@
 .card {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     position: relative;
     margin: 1rem 1rem 1rem 1rem;
@@ -14,8 +14,8 @@
 .image-holder {
     display: flex;
     position: relative;
-    top: 0;
-    left: 0;
+    /* top: 0;
+    left: 0; */
     /* aspect-ratio: 2/1.5; */
     margin: 2rem 0rem 6rem 0rem;
 }
@@ -37,19 +37,17 @@
 .imageOne {
     /* aspect-ratio: 1/1.5; */
     position: relative;
-    top: 0;
-    left: 0;
+    /* top: 0;
+    left: 0; */
     margin-top: 1.6rem;
-    margin-left: 1.6rem;
-
-
+    margin-left: -7.6rem;
 }
 
 .imageTwo {
     /* aspect-ratio: 1/1.5; */
     position: absolute;
     top: 9rem;
-    left: 6rem;
+    left: -4.5rem;
 }
 
 .imageOne:hover,
@@ -137,7 +135,7 @@
 
 .even .imageTwo {
     top: 10rem;
-    left: 2rem;
+    left: -7rem;
 }
 
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN */
@@ -154,13 +152,121 @@
 
     .imageOne,
     .imageTwo {
-        object-fit: cover;
-        border: solid 1px whitesmoke;
-        box-shadow: 0 0 10px 0 whitesmoke inset, 0 0 10px 4px whitesmoke;
-        transition: transform 300ms ease-in-out;
-        width: auto;
-        height: auto;
         max-width: 300px;
         max-height: 300px;
+    }
+
+    .imageOne {
+        margin-top: 1.6rem;
+        margin-left: -7.6rem;
+    }
+    
+    .imageTwo {
+        top: 12rem;
+        left: -4.5rem;
+    }
+
+    .even .imageOne {
+        top: 0;
+        left: 11rem;
+    }
+    
+    .even .imageTwo {
+        top: 13rem;
+        left: -10rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .card {
+        box-shadow: none;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .content {
+        width: 40%;
+    }
+
+    .title {
+        letter-spacing: 3px;
+        font-size: 2rem;
+    }
+
+    .button {
+        font-size: 1.8rem;
+    }
+
+    .image-holder {
+        margin: 2rem 0rem 6rem 3rem;
+    }
+
+    .imageOne,
+    .imageTwo {
+        max-width: 400px;
+        max-height: 400px;
+    }
+
+    .imageOne {
+        margin-top: 1.6rem;
+        margin-left: -5.6rem;
+    }
+    
+    .imageTwo {
+        top: 16rem;
+        left: -4.5rem;
+    }
+
+    .even {
+        flex-direction: row-reverse;
+    }
+
+    .even .image-holder {
+        margin: 2rem 10rem 6rem 0rem;
+    }
+
+    .even .imageOne {
+        top: 0;
+        left: 11rem;
+    }
+    
+    .even .imageTwo {
+        top: 13rem;
+        left: -14rem;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+
+    .content {
+        width: 40%;
+        margin-right: 2rem;
+        /* margin-left: 2rem; */
+    }
+
+    .button {
+        font-size: 2rem;
+        letter-spacing: 1.5px;
+        padding: 0.7rem 4rem;
+    }
+
+    .image-holder {
+        margin: 2rem 10rem 6rem 3rem;
+    }
+
+    .imageOne,
+    .imageTwo {
+        max-width: 500px;
+        max-height: 500px;
+    }
+
+    .even .imageOne {
+        top: 0;
+        left: 11rem;
+    }
+    
+    .even .imageTwo {
+        top: 20rem;
+        left: -14rem;
     }
 }

@@ -15,7 +15,7 @@ export const Header = () => {
             <div className={css.intro}>
                 <p className={css['intro-text']}>Hello, I'm Anton!</p>
                 <p className={css['intro-text']}>An ever curious </p>
-                <p className={css['intro-text']}>software engineering enthusiast</p>
+                <p className={css['intro-text']}>software engineering enthusiast,</p>
                 <p className={css['intro-text']}>aspiring to be a Front-End developer.</p>
             </div>
         </header>

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 
 import css from './Contact.module.css';
@@ -117,9 +118,9 @@ export const Contact = () => {
                 <p className={`${css.subtitle} ${css['msg-two']}`}>Get in touch!</p>
 
                 <div className={css['social-media']}>
-                    <p><i className={`${css.github} fa-brands fa-github`}></i></p>
-                    <p><i className={`${css.discord} fa-brands fa-discord`}></i></p>
-                    <p><i className={`${css.facebook} fa-brands fa-facebook`}></i></p>
+                    <p><Link to="https://github.com/AntonRusev" target="_blank"><i className={`${css.github} fa-brands fa-github`}></i></Link></p>
+                    <p><Link to="https://discord.com/users/281497774980333569" target="_blank"><i className={`${css.discord} fa-brands fa-discord`}></i></Link></p>
+                    <p><Link to="https://www.facebook.com/profile.php?id=100018521295273" target="_blank"><i className={`${css.facebook} fa-brands fa-facebook`}></i></Link></p>
                 </div>
             </div>
             <p className={css['made-by']}>Designed and hand-coded by Anton Rusev. Year 2023.</p>

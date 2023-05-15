@@ -196,6 +196,11 @@
     color: whitesmoke;
 }
 
+.social-media a{
+    font-size: 1.5rem;
+    color: whitesmoke;
+}
+
 .discord,
 .facebook,
 .github {
@@ -272,6 +277,10 @@
         gap: 2rem;
         font-size: 2rem;
     }
+
+    .social-media a{
+        font-size: 2rem;
+    }
     
     .made-by {
         color: whitesmoke;
@@ -280,5 +289,96 @@
         opacity: 0.5;
         position: absolute;
         bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .title {
+        letter-spacing: 3px;
+        font-size: 2rem;
+    }
+
+    .name,
+    .email,
+    .message {
+        width: 28rem;
+        margin: 0.5rem;
+        padding: 0.8rem;
+        font-size: 1.5rem;
+    }
+
+    .submit {
+        width: 29.5rem;
+        font-size: 1.5rem;
+        margin: 0.5rem;
+        padding: 0.8rem;
+    }
+
+    .subtitle {
+        font-size: 1.7rem;
+        margin-top: 14rem;
+    }
+
+    .msg-one {
+        animation: animation 5s infinite;
+    }
+    
+    .msg-two {
+        animation: animate 5s infinite;
+    }
+
+    .social-media {
+        gap: 3rem;
+        font-size: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .social-media a{
+        font-size: 3rem;
+    }
+    
+    .made-by {
+        color: whitesmoke;
+        text-align: center;
+        margin: 0rem 1rem 3rem 1rem;
+        opacity: 0.5;
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .name,
+    .email,
+    .message {
+        width: 32rem;
+        padding: 1.2rem;
+    }
+
+    .submit {
+        width: 34.4rem;
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 1.7rem;
+        margin-top: 20rem;
+    }
+
+    .msg-one {
+        animation: animation 5s infinite;
+    }
+    
+    .msg-two {
+        animation: animate 5s infinite;
+    }
+
+    .social-media {
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .made-by {
+        margin: 0rem 1rem 2rem 1rem;
     }
 }

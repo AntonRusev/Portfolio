@@ -3,6 +3,7 @@
 #root {
     /* font-family: 'Chivo Mono', monospace; */
     font-family: 'Changa', sans-serif;
+    max-width: 1920px;
     /* background-color: whitesmoke; */
 }
 
@@ -30,7 +31,7 @@
 
 /* TODO FIX THE SCALE BELOW */
 .parallax-back {
-    transform: translateZ(-15px) scale(19);
+    transform: translateZ(-15px) scale(19.3);
 }
 
 
@@ -43,6 +44,13 @@
     }
 
     .parallax-back {
-        transform: translateZ(-15px) scale(19.6);
+        transform: translateZ(-15px) scale(20.4);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #root {
+        font-size: 1.6rem;
+        line-height: 1.1;
     }
 }
