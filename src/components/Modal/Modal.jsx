@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+
 import css from './Modal.module.css';
 
 export const Modal = ({
@@ -10,7 +11,7 @@ export const Modal = ({
         setTimeout(() => {
             modalTrigger();
         }, 3000);
-    },[]);
+    }, []);
 
 
     return (
@@ -21,7 +22,7 @@ export const Modal = ({
                         (formErrors.username) ? `${formErrors.username}`
                             : (formErrors.email) ? `${formErrors.email}`
                                 : (formErrors.message) ? `${formErrors.message}`
-                                    : <span className={css.success}>Message Sent</span>
+                                    : <span className={css.success}>The service is currently unavailable. Sorry for the inconvinience.</span>
                     }
                 </p>
             </div>

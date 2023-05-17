@@ -2,20 +2,21 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 
-import css from './Contact.module.css';
 import { Modal } from '../Modal/Modal';
+
+import css from './Contact.module.css';
 
 export const Contact = () => {
     const [isDisabled, setIsDisabled] = useState(true);
     const [formErrors, setFormErrors] = useState({
         username: '',
         email: '',
-        message: ''
+        message: '',
     });
     const [touched, setTouched] = useState({
         username: false,
         email: false,
-        message: false
+        message: false,
     });
     const [modalActive, setModalActive] = useState(false);
 
@@ -29,7 +30,7 @@ export const Contact = () => {
             setIsDisabled(true);
         } else {
             setIsDisabled(false);
-        }
+        };
     }, [formErrors.username, formErrors.email, formErrors.message, touched.username, touched.email, touched.message]);
 
     const sendEmail = (e) => {
@@ -38,7 +39,9 @@ export const Contact = () => {
         emailjs.sendForm('service_oc8hto7', 'template_fqjye7i', form.current, 'MlBwpE6Z64Pnd-HKO')
             .then((result) => {
                 console.log(result.text);
-                console.log('MESSAGE SENT')
+                console.log('MESSAGE SENT');
+
+                modalTrigger();
                 e.target.reset();
             }, (error) => {
                 console.log(error.text);
@@ -56,20 +59,20 @@ export const Contact = () => {
         } else if (inputField === 'user_name') {
             setFormErrors(state => ({ ...state, username: '' }));
             setTouched(state => ({ ...state, username: true }));
-        }
+        };
 
         if (inputField === 'user_email' && value === '') {
             setFormErrors(state => ({ ...state, email: 'Email is required' }));
         } else if (inputField === 'user_email' && value.length > 0) {
             const isValid = isEmailValid(value);
+
             if (isValid === false) {
-                console.log('why this?')
                 setFormErrors(state => ({ ...state, email: 'Email is invalid' }));
             } else {
                 setFormErrors(state => ({ ...state, email: '' }));
                 setTouched(state => ({ ...state, email: true }));
-            }
-        }
+            };
+        };
 
         if (inputField === 'message' && value === '') {
             setFormErrors(state => ({ ...state, message: 'Message is required' }));
@@ -78,31 +81,29 @@ export const Contact = () => {
         } else if (inputField === 'message') {
             setFormErrors(state => ({ ...state, message: '' }));
             setTouched(state => ({ ...state, message: true }));
-        }
-    }
+        };
+    };
 
     const logFormData = (e) => {
         e.preventDefault();
-        console.log(form.current);
+
         setModalActive(!modalActive);
-    }
+    };
 
     const modalTrigger = () => {
         setModalActive(!modalActive);
-    }
+    };
 
     function isEmailValid(email) {
         return /\S+@\S+\.\S+/.test(email);
-    }
+    };
 
     return (
         <section id="contact" className={css.contact} >
-
             <h2 id="contact-me" className={css.title}>CONTACT</h2>
-            
+
             <div className={css.content}>
                 <form className={css['contact-form']} ref={form} onSubmit={logFormData}>
-
                     <input className={css.name} type="text" name="user_name" placeholder='Name' onBlur={validateForm} />
 
                     <input className={css.email} type="email" name="user_email" placeholder='Email' onBlur={validateForm} />
@@ -123,8 +124,8 @@ export const Contact = () => {
                     <p><Link to="https://www.facebook.com/profile.php?id=100018521295273" target="_blank"><i className={`${css.facebook} fa-brands fa-facebook`}></i></Link></p>
                 </div>
             </div>
+            
             <p className={css['made-by']}>Designed and hand-coded by Anton Rusev. Year 2023.</p>
         </section>
     );
-
 };

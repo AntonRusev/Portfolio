@@ -1,26 +1,32 @@
 @keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
-}
-/* TODO FIX THE HEIGHT FOR THE PARALLAX EFFECT */
-.stars, .twinkling{
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    width:100%;
-    height:120%;
-    display:block;
+  from {
+    background-position: 0 0;
   }
 
-  .stars {
-    background:#000 url(../../assets/stars.png) repeat top center;
-    z-index: 1;
+  to {
+    background-position: -10000px 5000px;
   }
-  
-  .twinkling{
-    background:transparent url(../../assets/twinkling.png) repeat top center;
-    z-index: 2;
-    animation:move-twink-back 200s linear infinite;
-  }
+}
+
+.stars,
+.twinkling {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 120%;
+  display: block;
+}
+
+.stars {
+  background: #000 url(../../assets/stars.png) repeat top center;
+  z-index: 1;
+}
+
+.twinkling {
+  background: transparent url(../../assets/twinkling.png) repeat top center;
+  z-index: 2;
+  animation: move-twink-back 200s linear infinite;
+}

@@ -5,7 +5,6 @@
     gap: 2rem;
     clip-path: polygon(0 0, 75% 0, 100% 51%, 100% 100%, 70% 100%, 23% 100%, 16% 84%, 0 50%);
     background: rgb(2, 211, 248);
-    /* background: radial-gradient(circle, rgba(2, 211, 248, 1) 0%, rgba(40, 14, 68, 0.6112969871542367) 100%); */
     background: linear-gradient(to right bottom, hsl(236, 50%, 50%, 1), hsl(195, 50%, 50%, 0.6112969871542367));
     min-height: 100vh;
 }
@@ -13,7 +12,6 @@
 .info-long {
     width: 55%;
     display: flex;
-    /* text-align: center; */
     flex-direction: column;
     gap: 2rem;
     margin: 10rem 0rem;
@@ -31,21 +29,30 @@
     font-weight: 500;
     color: whitesmoke;
     text-shadow:
-    0 0 7px whitesmoke,
-    0 0 10px whitesmoke,
-    0 0 21px whitesmoke;
+        0 0 7px whitesmoke,
+        0 0 10px whitesmoke,
+        0 0 21px whitesmoke;
 }
 
 .highlight {
     animation: color-change 7s infinite;
 }
-@keyframes color-change {
-    0% { color: black; }
-    50% { color: whitesmoke; }
-    100% { color: black; }
-  }
 
-  .link-btn,
+@keyframes color-change {
+    0% {
+        color: black;
+    }
+
+    50% {
+        color: whitesmoke;
+    }
+
+    100% {
+        color: black;
+    }
+}
+
+.link-btn,
 .back-btn {
     font-family: 'Changa', sans-serif;
     display: flex;
@@ -76,13 +83,13 @@
     transition: all 200ms ease-out;
 }
 
-  .link-btn:hover::before,
-.back-btn:hover::before{
+.link-btn:hover::before,
+.back-btn:hover::before {
     top: 0;
     left: 0;
-  }
+}
 
-  /* MEDIA QUERIES FOR RESPONSIVE DESIGN */
+/* MEDIA QUERIES FOR RESPONSIVE DESIGN */
 
 @media screen and (min-width: 800px) {
     .sub {

@@ -1,6 +1,6 @@
 import { HashLink } from "react-router-hash-link";
 
-import css from './Header.module.css'
+import css from './Header.module.css';
 
 export const Header = () => {
     return (
@@ -12,6 +12,7 @@ export const Header = () => {
                     <li><HashLink smooth to='/#contact-me'>Contact</HashLink></li>
                 </ul>
             </nav>
+
             <div className={css.intro}>
                 <p className={css['intro-text']}>Hello, I'm Anton!</p>
                 <p className={css['intro-text']}>An ever curious </p>

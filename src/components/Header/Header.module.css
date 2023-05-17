@@ -1,20 +1,15 @@
 #header {
-    /* background-color: #1b2c47; */
-    /* background-color: #0e1724; */
-    /* background-color: #0fa; */
-    position:relative;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     background: rgb(34, 193, 195);
-    /* TODO- ORIGINAL WAS background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(14, 23, 36, 1) 90%); */
     background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(14, 23, 36, 0.8112969871542367) 90%);
     color: #03e9f4;
     height: 100vh;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
     padding: 2rem;
-    /* margin-bottom: 4rem; */
 }
 
 nav {
@@ -44,12 +39,12 @@ nav {
     background: #03e9f4;
     color: #fff;
     box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 100px #03e9f4;
+        0 0 25px #03e9f4,
+        0 0 50px #03e9f4,
+        0 0 100px #03e9f4;
 }
 
-.list li:hover a{
+.list li:hover a {
     color: #fff;
 }
 
@@ -67,7 +62,7 @@ nav {
     line-height: 1.4;
     letter-spacing: 1px;
     text-shadow:
-    0 0 7px whitesmoke;
+        0 0 7px whitesmoke;
 }
 
 .intro-text:first-child {
@@ -81,15 +76,14 @@ nav {
     transition: all 1s ease-in-out;
     animation: flicker 1s ease-in-out infinite alternate;
 }
+
 @keyframes flicker {
     0% {
         opacity: 0.5;
-        /* text-shadow: 2px 2px 10px whitesmoke; */
     }
 
     100% {
         opacity: 1;
-        /* text-shadow: 2px 2px 20px whitesmoke; */
     }
 }
 
@@ -104,35 +98,35 @@ nav {
         justify-content: center;
         margin-top: 10rem;
     }
-    
+
     .intro-text {
         font-size: 1.4rem;
         line-height: 1.5;
         letter-spacing: 1.1px;
     }
-    
+
     .intro-text:first-child {
         font-size: 1.6rem;
         letter-spacing: 1.3px;
     }
-    
-  }
 
-  @media screen and (min-width: 800px) {
+}
+
+@media screen and (min-width: 800px) {
     .intro-text {
         font-size: 1.5rem;
         line-height: 1.7;
         letter-spacing: 1.3px;
     }
-    
+
     .intro-text:first-child {
         font-size: 1.7rem;
         letter-spacing: 1.5px;
     }
-    
-  }
 
-  @media screen and (min-width: 1200px) {
+}
+
+@media screen and (min-width: 1200px) {
 
     .list a {
         font-size: 1.7rem;
@@ -143,15 +137,15 @@ nav {
     .intro {
         margin-top: 8rem;
     }
-    
+
     .intro-text {
         font-size: 2rem;
         letter-spacing: 1.5px;
     }
-    
+
     .intro-text:first-child {
         font-size: 2.3rem;
         letter-spacing: 1.8px;
     }
-    
-  }
+
+}

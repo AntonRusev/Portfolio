@@ -1,16 +1,13 @@
 @import url('./reset.css');
 
 #root {
-    /* font-family: 'Chivo Mono', monospace; */
     font-family: 'Changa', sans-serif;
     max-width: 1920px;
-    /* background-color: whitesmoke; */
 }
 
 .parallax {
     perspective: 1px;
     height: 100vh;
-    /* width: 110vw; */
     overflow-x: hidden;
     overflow-y: auto;
     position: relative;
@@ -29,11 +26,9 @@
     transform: translateZ(0);
 }
 
-/* TODO FIX THE SCALE BELOW */
 .parallax-back {
-    transform: translateZ(-15px) scale(19.3);
+    transform: translateZ(-15px) scale(19);
 }
-
 
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN */
 
@@ -44,7 +39,7 @@
     }
 
     .parallax-back {
-        transform: translateZ(-15px) scale(20.4);
+        transform: translateZ(-15px) scale(20.2);
     }
 }
 
@@ -53,4 +48,12 @@
         font-size: 1.6rem;
         line-height: 1.1;
     }
+
+    .parallax-back {
+        transform: translateZ(-15px) scale(20.2);
+    }
+}
+
+@media screen and (min-width: 1400px) {
+
 }

@@ -8,14 +8,15 @@ export const Calculator = () => {
     return (
         <section id="calculator" className={css.calculator}>
             <h1 className={css.title}>Crazy Calculator</h1>
+
             <div className={css['image-holder']}>
                 <img className={css.imageOne} src='../../src/assets/calc-mobile.png' />
                 <img className={css.imageTwo} src="../../src/assets/calc-full.png" />
             </div>
 
             <div className={css.links}>
-                <Link to='#' className={css['link-btn']}><span>View site</span></Link>
-                <Link to='#' className={css['link-btn']}><span>Github Repo</span></Link>
+                <Link to='https://crazy-calculating-challenge.web.app/' target="_blank" className={css['link-btn']}><span>View site</span></Link>
+                <Link to='https://github.com/AntonRusev/Crazy-Calculator' target="_blank" className={css['link-btn']}><span>Github Repo</span></Link>
             </div>
 
             <div className={css.content}>
@@ -57,7 +58,6 @@ export const Calculator = () => {
                     </p>
                 </div>
 
-                {/* <button className={css['back-btn']} onClick={() => navigate('/')}>Back</button> */}
                 <HashLink smooth to={`/#my-projects`} className={css['back-btn']}>Back</HashLink>
             </div>
         </section>
