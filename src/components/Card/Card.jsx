@@ -1,7 +1,6 @@
 import { HashLink } from "react-router-hash-link";
 
 import css from './Card.module.css';
-import { } from '../../assets/nft-create-mobile.png';
 
 export const Card = ({
     props

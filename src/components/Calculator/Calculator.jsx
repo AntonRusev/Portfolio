@@ -10,8 +10,8 @@ export const Calculator = () => {
             <h1 className={css.title}>Crazy Calculator</h1>
 
             <div className={css['image-holder']}>
-                <img className={css.imageOne} src='../../src/assets/calc-mobile.png' />
-                <img className={css.imageTwo} src="../../src/assets/calc-full.png" />
+                <img className={css.imageOne} src="https://i.ibb.co/Y7m35jz/calc-mobile.png" />
+                <img className={css.imageTwo} src="https://i.ibb.co/Vt3TmVF/calc-full.png" />
             </div>
 
             <div className={css.links}>

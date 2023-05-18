@@ -10,8 +10,8 @@ export const Nfts = () => {
             <h1 className={css.title}>NFTs Gallery</h1>
 
             <div className={css['image-holder']}>
-                <img className={css.imageOne} src="../../src/assets/nft-create-mobile.png" />
-                <img className={css.imageTwo} src="../../src/assets/nft-home-full.png" />
+                <img className={css.imageOne} src="https://i.ibb.co/k8HVYDr/nft-create-mobile.png" />
+                <img className={css.imageTwo} src="https://i.ibb.co/xqb8y1f/nft-home-full.png" />
             </div>
 
             <div className={css.links}>

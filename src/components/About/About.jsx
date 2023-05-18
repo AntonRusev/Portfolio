@@ -16,7 +16,7 @@ export const About = () => {
                 </div>
 
                 <div className={css.pic}>
-                    <img src="../../src/assets/photo.png" alt="" />
+                    <img src="https://avatars.githubusercontent.com/u/102323013?v=4" alt="" />
                 </div>
             </div>
 
