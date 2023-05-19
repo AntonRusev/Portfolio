@@ -199,7 +199,7 @@
     color: whitesmoke;
 }
 
-.discord,
+.linkedin,
 .facebook,
 .github {
     transition: all 600ms ease-in-out;
@@ -207,7 +207,7 @@
     opacity: 0.6;
 }
 
-.discord:hover {
+.linkedin:hover {
     color: #5562ea;
     transform: scale(1.2);
     opacity: 1;

@@ -22,7 +22,7 @@ export const Modal = ({
                         (formErrors.username) ? `${formErrors.username}`
                             : (formErrors.email) ? `${formErrors.email}`
                                 : (formErrors.message) ? `${formErrors.message}`
-                                    : <span className={css.success}>The service is currently unavailable. Sorry for the inconvinience.</span>
+                                    : <span className={css.success}>Message Sent</span>
                     }
                 </p>
             </div>

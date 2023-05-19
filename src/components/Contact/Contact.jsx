@@ -103,7 +103,7 @@ export const Contact = () => {
             <h2 id="contact-me" className={css.title}>CONTACT</h2>
 
             <div className={css.content}>
-                <form className={css['contact-form']} ref={form} onSubmit={logFormData}>
+                <form className={css['contact-form']} ref={form} onSubmit={sendEmail}>
                     <input className={css.name} type="text" name="user_name" placeholder='Name' onBlur={validateForm} />
 
                     <input className={css.email} type="email" name="user_email" placeholder='Email' onBlur={validateForm} />
@@ -120,7 +120,7 @@ export const Contact = () => {
 
                 <div className={css['social-media']}>
                     <p><Link to="https://github.com/AntonRusev" target="_blank"><i className={`${css.github} fa-brands fa-github`}></i></Link></p>
-                    <p><Link to="https://discord.com/users/281497774980333569" target="_blank"><i className={`${css.discord} fa-brands fa-discord`}></i></Link></p>
+                    <p><Link to="https://www.linkedin.com/in/anton-rusev-9861a5277/" target="_blank"><i className={`${css.linkedin} fa-brands fa-linkedin`}></i></Link></p>
                     <p><Link to="https://www.facebook.com/profile.php?id=100018521295273" target="_blank"><i className={`${css.facebook} fa-brands fa-facebook`}></i></Link></p>
                 </div>
             </div>
