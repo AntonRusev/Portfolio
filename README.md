@@ -7,3 +7,7 @@ It has some basic routing(using React Router Dom and React Router Hash-link) and
 The form in the Contact component is made with the help of EmailJS library, which allows it to work as client-side only. Additionaly, I implemented data validation to it.
 
 The portfolio has responsive design.
+
+## 2. Online Access 
+
+The app can be viewed at https://anton-rusev-portfolio.web.app/

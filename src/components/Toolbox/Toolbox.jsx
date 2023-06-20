@@ -23,7 +23,7 @@ export const Toolbox = () => {
             
             <p className={css.pyramid}>
                 <span className={css.tool}>VS Code</span>
-                <span className={css.tool}>MongoDB</span>
+                <span className={css.tool}>Docker</span>
                 <span className={css.tool}>Mongoose</span>
                 <span className={css.tool}>Typescript</span>
             </p>
