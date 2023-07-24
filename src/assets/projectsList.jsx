@@ -15,4 +15,12 @@ export const projectsList = [
         link: 'calculator',
         style: 'even',
     },
+    {
+        title: 'CHOREMINDER',
+        description: "Any resemblance to fictional creatures, their names, or colors, is purely coincidental.",
+        pictureOne: "https://i.ibb.co/0Zp8Cpd/chore-mobile.png",
+        pictureTwo: "https://i.ibb.co/Kmdz679/choreminder.png",
+        link: 'choreminder',
+        style: 'odd',
+    },
 ];

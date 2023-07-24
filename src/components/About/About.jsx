@@ -10,7 +10,7 @@ export const About = () => {
                 <div className={css.info}>
                     <div className={css['info-short']}>
                         <p>
-                            I enjoy the process of creating new things, brainstorming different ways to improve parts of already existing projects, and all the challenges that go hand in hand with all that. Making progress, after being stuck on a particular problem, is one of the most <span className={css.highlight}>satisfying</span> feelings to me.
+                            I enjoy the process of creating new things, brainstorming different ways to improve parts of already existing projects, and all the challenges that go hand in hand with all that. Making progress, after being stuck on a particular problem, is one of the most <span className={css.demo}>satisfying</span> feelings to me.
                         </p>
                     </div>
                 </div>

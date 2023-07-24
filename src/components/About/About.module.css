@@ -3,9 +3,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    clip-path: polygon(45% 0, 100% 20%, 100% 80%, 20% 100%, 0 70%, 0 30%);
-    background: rgb(2, 211, 248);
-    background: radial-gradient(circle, rgba(2, 211, 248, 1) 0%, rgba(40, 14, 68, 0.6112969871542367) 100%);
     min-height: 100vh;
 }
 
@@ -63,6 +60,13 @@
     gap: 2rem;
 }
 
+.info-short {
+    color: whitesmoke;
+    text-shadow:
+        0 0 7px whitesmoke;
+    opacity: 0.9;
+}
+
 .button {
     display: flex;
     align-items: center;
@@ -114,6 +118,29 @@
     }
 }
 
+.demo {
+    animation: text-shadow-change 7s infinite;
+}
+
+@keyframes text-shadow-change {
+    0% {
+        text-shadow:
+            0 0 7px whitesmoke;
+    }
+
+    50% {
+        text-shadow:
+            0 0 7px whitesmoke,
+            0 0 10px whitesmoke,
+            0 0 21px whitesmoke;
+    }
+
+    100% {
+        text-shadow:
+            0 0 7px whitesmoke;
+    }
+}
+
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN */
 
 @media screen and (min-width: 600px) {
@@ -135,7 +162,7 @@
 @media screen and (min-width: 1200px) {
     .title {
         letter-spacing: 3px;
-        font-size: 2.2rem;
+        font-size: 3rem;
     }
 
     .pic img {

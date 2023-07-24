@@ -59,15 +59,6 @@ export const Nfts = () => {
                     </p>
                 </div>
 
-                <div className={css.info}>
-                    <h4 className={css.subtitle}>To Do</h4>
-                    
-                    <p>
-                        One thing that I'm looking forward to do with this application, once I get a bit more in-depth knowledge of React, is to add more complex unit tests.
-                        Another thing that is high on my list at the moment, is to refactor the application to work with CSS modules, instead of direct CSS injection, as it currently is.
-                    </p>
-                </div>
-
                 <HashLink smooth to={`/#my-projects`} className={css['back-btn']}>Back</HashLink>
             </div>
         </section>

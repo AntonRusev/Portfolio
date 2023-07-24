@@ -45,7 +45,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .contact-form {
@@ -293,7 +292,7 @@
 @media screen and (min-width: 1200px) {
     .title {
         letter-spacing: 3px;
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .name,

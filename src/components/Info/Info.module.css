@@ -5,7 +5,7 @@
     gap: 2rem;
     clip-path: polygon(0 0, 75% 0, 100% 51%, 100% 100%, 70% 100%, 23% 100%, 16% 84%, 0 50%);
     background: rgb(2, 211, 248);
-    background: linear-gradient(to right bottom, hsl(236, 50%, 50%, 1), hsl(195, 50%, 50%, 0.6112969871542367));
+    background: linear-gradient(to right bottom, hsl(236, 50%, 50%, 0.61), hsl(195, 50%, 50%, 0.6112969871542367));
     min-height: 100vh;
 }
 

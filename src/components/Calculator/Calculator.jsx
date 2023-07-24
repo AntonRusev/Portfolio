@@ -51,13 +51,6 @@ export const Calculator = () => {
                     </p>
                 </div>
 
-                <div className={css.info}>
-                    <h4 className={css.subtitle}>To Do</h4>
-                    <p>
-                        I'm playing with the idea of adding authentication, or simply adding a "Name" input upon completing the challenge, and making the High-scores persistent(stored on a server). This way players would be able to see their standings compared to other people.
-                    </p>
-                </div>
-
                 <HashLink smooth to={`/#my-projects`} className={css['back-btn']}>Back</HashLink>
             </div>
         </section>

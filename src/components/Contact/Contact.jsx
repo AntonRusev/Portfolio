@@ -120,9 +120,7 @@ export const Contact = () => {
 
                 <div className={css['social-media']}>
                     <p><Link to="https://github.com/AntonRusev" target="_blank"><i className={`${css.github} fa-brands fa-github`}></i></Link></p>
-                    <p><Link to="https://www.linkedin.com/in/anton-rusev-9861a5277/" target="_blank"><i className={`${css.linkedin} fa-brands fa-linkedin`}></i></Link></p>
-                    <p><Link to="https://www.facebook.com/profile.php?id=100018521295273" target="_blank"><i className={`${css.facebook} fa-brands fa-facebook`}></i></Link></p>
-                </div>
+                    <p><Link to="https://www.linkedin.com/in/anton-rusev-9861a5277/" target="_blank"><i className={`${css.linkedin} fa-brands fa-linkedin`}></i></Link></p>                </div>
             </div>
             
             <p className={css['made-by']}>Designed and hand-coded by Anton Rusev. Year 2023.</p>

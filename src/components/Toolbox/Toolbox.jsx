@@ -17,15 +17,15 @@ export const Toolbox = () => {
             <p className={css.pyramid}>
                 <span className={css.tool}>RESTful APIs</span>
                 <span className={css.tool}>Git</span>
-                <span className={css.tool}>Firebase</span>
+                <span className={css.tool}>Typescript</span>
                 <span className={css.tool}>Github</span>
             </p>
             
             <p className={css.pyramid}>
                 <span className={css.tool}>VS Code</span>
-                <span className={css.tool}>Docker</span>
+                <span className={css.tool}>SASS</span>
                 <span className={css.tool}>Mongoose</span>
-                <span className={css.tool}>Typescript</span>
+                <span className={css.tool}>Firebase</span>
             </p>
         </div>
     );
