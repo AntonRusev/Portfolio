@@ -1,5 +1,13 @@
 export const projectsList = [
     {
+        title: 'Trivia-l',
+        description: "Test your general knowledge in various quiz categories and set your own score records.",
+        pictureOne: "https://i.ibb.co/zfWPKRB/trivial-mobile.png",
+        pictureTwo: "https://i.ibb.co/BnCjXhs/trivial.png",
+        link: 'trivial',
+        style: 'even'
+    },
+    {
         title: 'NFTs Gallery',
         description: "No, not that kind of NFTs(although they seem to be equally worthless nowadays)...",
         pictureOne: "https://i.ibb.co/k8HVYDr/nft-create-mobile.png",

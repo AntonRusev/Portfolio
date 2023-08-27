@@ -9,22 +9,22 @@ export const Toolbox = () => {
             </p>
 
             <p className={css.pyramid}>
-                <span className={css.tool}>Node.js</span>
                 <span className={css.tool}>JavaScript</span>
                 <span className={css.tool}>React</span>
+                <span className={css.tool}>Git</span>
             </p>
 
             <p className={css.pyramid}>
                 <span className={css.tool}>RESTful APIs</span>
-                <span className={css.tool}>Git</span>
                 <span className={css.tool}>Typescript</span>
                 <span className={css.tool}>Github</span>
+                <span className={css.tool}>SASS</span>
             </p>
             
             <p className={css.pyramid}>
-                <span className={css.tool}>VS Code</span>
-                <span className={css.tool}>SASS</span>
-                <span className={css.tool}>Mongoose</span>
+                <span className={css.tool}>Redux Toolkit</span>
+                <span className={css.tool}>Responsive Design</span>
+                <span className={css.tool}>Tailwind CSS</span>
                 <span className={css.tool}>Firebase</span>
             </p>
         </div>

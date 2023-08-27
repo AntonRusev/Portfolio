@@ -9,6 +9,7 @@ import { Info } from './components/Info/Info';
 import { Nfts } from './components/Nfts/Nfts';
 
 import './App.css';
+import { Trivial } from './components/Trivial/Trivial';
 
 function App() {
     return (
@@ -26,6 +27,7 @@ function App() {
                         <Route path='/calculator' element={<Calculator />} />
                         <Route path='/choreminder' element={<Choreminder />} />
                         <Route path='/nfts' element={<Nfts />} />
+                        <Route path='/trivial' element={<Trivial />} />
                     </Routes>
                 </div>
             </div>
