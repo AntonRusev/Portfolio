@@ -28,6 +28,6 @@ describe('Testing Info Component', () => {
         fireEvent.click(backBtn);
 
         const currentUrlHash = global.window.location.hash;
-        await expect(currentUrlHash).toContain(`#about`);
+        expect(currentUrlHash).toContain(`#about`);
     });
 });
