@@ -35,8 +35,8 @@ describe('Testing the Contact Component', () => {
 
         const links = screen.getAllByRole('link');
 
-        expect(links[0]).toHaveAttribute('href', 'https://github.com/AntonRusev')
-        expect(links[1]).toHaveAttribute('href', 'https://www.linkedin.com/in/anton-rusev-9861a5277/')
+        expect(links[0]).toHaveAttribute('href', 'https://github.com/AntonRusev');
+        expect(links[1]).toHaveAttribute('href', 'https://www.linkedin.com/in/anton-rusev-9861a5277/');
     });
 
     test('input fields exist', () => {
@@ -49,16 +49,16 @@ describe('Testing the Contact Component', () => {
         const [usernameInput, emailInput, messageInput] = (screen.getAllByRole("textbox"));
 
         expect(usernameInput).toBeInTheDocument();
-        expect(usernameInput).toHaveAttribute("type", "text");
+        expect(usernameInput).toHaveAttribute("name", "user_name");
 
         expect(emailInput).toBeInTheDocument();
-        expect(emailInput).toHaveAttribute("type", "email");
+        expect(emailInput).toHaveAttribute("name", "user_email");
 
         expect(messageInput).toBeInTheDocument();
         expect(messageInput).toHaveAttribute("name", "message");
     });
 
-    test('input accept valid data', async () => {
+    test('input accept data', async () => {
         const user = userEvent.setup();
 
         render(
@@ -67,17 +67,15 @@ describe('Testing the Contact Component', () => {
             </BrowserRouter>
         );
 
-
         const [usernameInput, emailInput, messageInput] = (screen.getAllByRole("textbox"));
 
         await user.type(usernameInput, "user's name");
-        await expect(usernameInput).toHaveValue("user's name");
+        expect(usernameInput).toHaveValue("user's name");
 
         await user.type(emailInput, "test@mail.com");
-        await expect(emailInput).toHaveValue("test@mail.com");
+        expect(emailInput).toHaveValue("test@mail.com");
 
         await user.type(messageInput, "user's message");
-        await expect(messageInput).toHaveValue("user's message");
-
+        expect(messageInput).toHaveValue("user's message");
     });
 });
