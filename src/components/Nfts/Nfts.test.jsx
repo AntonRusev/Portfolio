@@ -1,51 +1,51 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 
-import { Calculator } from "./Calculator";
+import { Nfts } from "./Nfts";
 
-describe('Testing the Calculator component', () => {
+describe('Testing the Nfts component', () => {
     test('shows name of the project', () => {
         render(
             <BrowserRouter>
-                <Calculator />
+                <Nfts />
             </BrowserRouter>
         );
 
         const headingText = (screen.getByRole('heading', { level: 1 })).textContent;
-        expect(headingText).toBe("Crazy Calculator");
+        expect(headingText).toBe("NFTs Gallery");
     });
 
     test('shows the images', () => {
         render(
             <BrowserRouter>
-                <Calculator />
+                <Nfts />
             </BrowserRouter>
         );
 
         const [imgOne, imgTwo] = screen.getAllByRole('img');
 
-        expect(imgOne).toHaveAttribute('src', 'https://i.ibb.co/Y7m35jz/calc-mobile.png');
-        expect(imgTwo).toHaveAttribute('src', 'https://i.ibb.co/Vt3TmVF/calc-full.png');
+        expect(imgOne).toHaveAttribute('src', 'https://i.ibb.co/k8HVYDr/nft-create-mobile.png');
+        expect(imgTwo).toHaveAttribute('src', 'https://i.ibb.co/xqb8y1f/nft-home-full.png');
     });
 
     test('has proper links', () => {
         render(
             <BrowserRouter>
-                <Calculator />
+                <Nfts />
             </BrowserRouter>
         );
 
         const [deployedLink, repoLink, backBtn] = screen.getAllByRole('link');
 
-        expect(deployedLink).toHaveAttribute('href', 'https://crazy-calculating-challenge.web.app/');
-        expect(repoLink).toHaveAttribute('href', 'https://github.com/AntonRusev/Crazy-Calculator');
+        expect(deployedLink).toHaveAttribute('href', 'https://nfts-gallery.web.app/');
+        expect(repoLink).toHaveAttribute('href', 'https://github.com/AntonRusev/React-NFTs');
         expect(backBtn).toHaveAttribute('href', '/#my-projects');
     });
 
     test('Back button works properly', () => {
         render(
             <BrowserRouter>
-                <Calculator />
+                <Nfts />
             </BrowserRouter>
         );
 
